@@ -25,6 +25,8 @@
  * }
  */
 
+@use "sass:math";
+
 @mixin font-style-fluid($name) {
 	/* stylelint-disable length-zero-no-unit */
 	min-height: 0vw; /* Fix Safari bug with viewport units in calc() */
@@ -36,18 +38,18 @@
 		map-deep-get($font-styles, $name, font-style)
 	);
 
-	line-height: strip-unit(map-deep-get($font-styles, $name, small-line-height) / map-deep-get($font-styles, $name, small-font-size));
+	line-height: strip-unit(math.div(map-deep-get($font-styles, $name, small-line-height), map-deep-get($font-styles, $name, small-font-size)));
 
 	@include mq($from: medium) {
-		line-height: strip-unit(map-deep-get($font-styles, $name, medium-line-height) / map-deep-get($font-styles, $name, medium-font-size));
+		line-height: strip-unit(math.div(map-deep-get($font-styles, $name, medium-line-height), map-deep-get($font-styles, $name, medium-font-size)));
 	}
 
 	@include mq($from: large) {
-		line-height: strip-unit(map-deep-get($font-styles, $name, large-line-height) / map-deep-get($font-styles, $name, large-font-size));
+		line-height: strip-unit(math.div(map-deep-get($font-styles, $name, large-line-height), map-deep-get($font-styles, $name, large-font-size)));
 	}
 
 	@include mq($from: xlarge) {
-		line-height: strip-unit(map-deep-get($font-styles, $name, xlarge-line-height) / map-deep-get($font-styles, $name, xlarge-font-size));
+		line-height: strip-unit(math.div(map-deep-get($font-styles, $name, xlarge-line-height), map-deep-get($font-styles, $name, xlarge-font-size)));
 	}
 
 	@if map-deep-get($font-styles, $name, text-transform) != none {
