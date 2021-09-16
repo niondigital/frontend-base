@@ -21,12 +21,14 @@
  * }
  */
 
+@use "sass:math";
+
 @mixin font-size($font-size, $line-height: $font-size) {
 	font-size: $font-size;
 
 	@if $line-height == auto {
 		line-height: $line-height-base;
 	} @else {
-		line-height: strip-unit($line-height / $font-size);
+		line-height: strip-unit(math.div($line-height, $font-size));
 	}
 }

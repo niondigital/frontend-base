@@ -2,16 +2,18 @@
  * Unit Helper Functions
  */
 
+@use "sass:math";
+
 @function px-to-em($px, $ref: $font-size_base) {
-	@return to-em(to-px($px) / to-px($ref));
+	@return to-em(math.div(to-px($px), to-px($ref)));
 }
 
 @function px-to-rem($px) {
-	@return to-rem(to-px($px) / to-px($font-size_base));
+	@return to-rem(math.div(to-px($px), to-px($font-size_base)));
 }
 
 @function px-to-px($px, $ref: $size_width-content) {
-	@return (to-px($px) / to-px($ref) * 100%);
+	@return (math.div(to-px($px), to-px($ref)) * 100%);
 }
 
 /* stylelint-disable length-zero-no-unit */
@@ -31,7 +33,7 @@
 
 @function strip-unit($number) {
 	@if type-of($number) == "number" and not unitless($number) {
-		@return $number / ($number * 0 + 1);
+		@return math.div($number, $number * 0 + 1);
 	}
 
 	@return $number;

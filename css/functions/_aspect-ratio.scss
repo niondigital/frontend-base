@@ -8,6 +8,8 @@
  *     }
  * }
  */
+@use "sass:math";
+
 @function aspect-ratio($name) {
-	@return percentage(map-deep-get($aspect-ratios, $name, height) / map-deep-get($aspect-ratios, $name, width));
+	@return percentage(math.div(map-deep-get($aspect-ratios, $name, height), map-deep-get($aspect-ratios, $name, width)));
 }
