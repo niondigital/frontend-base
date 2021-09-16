@@ -19,7 +19,7 @@
 
 $xlarge: map-get($breakpoints, xlarge);
 
-@if xlarge {
+@if $xlarge {
 	$max-vw: map-get($breakpoints, xlarge);
 } @else {
 	$max-vw: map-get($breakpoints, large);

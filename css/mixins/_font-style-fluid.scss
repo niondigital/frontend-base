@@ -25,6 +25,8 @@
  * }
  */
 
+@use "sass:math";
+
 $xlarge: map-get($breakpoints, xlarge);
 
 @mixin font-style-fluid($name) {
@@ -38,19 +40,19 @@ $xlarge: map-get($breakpoints, xlarge);
 		map-deep-get($font-styles, $name, font-style)
 	);
 
-	line-height: strip-unit(map-deep-get($font-styles, $name, small-line-height) / map-deep-get($font-styles, $name, small-font-size));
+	line-height: strip-unit(math.div(map-deep-get($font-styles, $name, small-line-height), map-deep-get($font-styles, $name, small-font-size)));
 
 	@include mq($from: medium) {
-		line-height: strip-unit(map-deep-get($font-styles, $name, medium-line-height) / map-deep-get($font-styles, $name, medium-font-size));
+		line-height: strip-unit(math.div(map-deep-get($font-styles, $name, medium-line-height), map-deep-get($font-styles, $name, medium-font-size)));
 	}
 
 	@include mq($from: large) {
-		line-height: strip-unit(map-deep-get($font-styles, $name, large-line-height) / map-deep-get($font-styles, $name, large-font-size));
+		line-height: strip-unit(math.div(map-deep-get($font-styles, $name, large-line-height), map-deep-get($font-styles, $name, large-font-size)));
 	}
 
 	@if $xlarge {
 		@include mq($from: xlarge) {
-			line-height: strip-unit(map-deep-get($font-styles, $name, xlarge-line-height) / map-deep-get($font-styles, $name, xlarge-font-size));
+			line-height: strip-unit(math.div(map-deep-get($font-styles, $name, xlarge-line-height), map-deep-get($font-styles, $name, xlarge-font-size)));
 		}
 	}
 
