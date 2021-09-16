@@ -1,5 +1,5 @@
 /**
- * Visuallyhidden
+ * Hidden
  */
 
 .u-hidden {
@@ -7,7 +7,7 @@
 }
 
 .u-hidden-s {
-	@include mq($to: medium) {
+	@include mq($until: medium) {
 		display: none !important;
 	}
 }
@@ -19,7 +19,7 @@
 }
 
 .u-hidden-m-down {
-	@include mq($to: large) {
+	@include mq($until: large) {
 		display: none !important;
 	}
 }
