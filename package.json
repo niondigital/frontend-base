@@ -1,23 +1,21 @@
 {
-  "name": "@swey/heyday-base",
+  "name": "@niondigital/frontend-base",
   "version": "0.2.3",
-  "description": "Heyday Base CSS + JS\n",
+  "description": "nion digital base CSS + JS\n",
   "repository": {
     "type": "git",
-    "url": "https://github.com/swey/heyday-base.git"
+    "url": "https://github.com/niondigital/frontend-base.git"
   },
-  "author": "Heyday",
-  "license": "MIT",
+  "author": "nion digital GmbH",
   "bugs": {
-    "url": "https://github.com/swey/heyday-base/issues"
+    "url": "https://github.com/niondigital/frontend-base/issues"
   },
-  "homepage": "https://github.com/swey/heyday-base",
+  "homepage": "https://github.com/niondigital/frontend-base",
   "dependencies": {
     "@types/lodash": "^4.14.173",
     "fontfaceobserver": "2.0.13",
     "lodash": "^4.17.21",
     "normalize.css": "8.0.1"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
