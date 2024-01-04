@@ -1,6 +1,4 @@
-/**
- * Visually hidden text for screenreaders, for example.
- */
+@use '../mixins' as *;
 
 .o-visuallyhidden {
 	@include visuallyhidden();

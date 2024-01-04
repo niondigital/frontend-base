@@ -27,7 +27,7 @@
  *   [data-whatinput="keyboard"] .my-parent:focus & {
  *      background-color: red;
  *   }
- *}
+ * }
  */
 
 @mixin hover-focus($hover-parent: false) {

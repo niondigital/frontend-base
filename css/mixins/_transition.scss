@@ -1,6 +1,13 @@
-// Usage:   @include transition(width, height 0.3s ease-in-out);
-// Output:  transition(width 0.2s, height 0.3s ease-in-out);
-//
+/**
+ * Usage:
+ *
+ * @include transition(width, height 0.3s ease-in-out);
+ *
+ * Output:
+ *
+ * transition: width 0.2s, height 0.3s ease-in-out;
+ */
+
 // Pass in any number of transitions
 @mixin transition($transitions...) {
 	$unfoldedTransitions: ();
@@ -10,7 +17,7 @@
 	transition: $unfoldedTransitions;
 }
 
-@function unfoldTransition ($transition) {
+@function unfoldTransition($transition) {
 	// Default values
 	$property: all;
 	$duration: $transition-default-duration;

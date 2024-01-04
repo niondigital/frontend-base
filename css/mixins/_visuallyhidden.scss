@@ -1,10 +1,3 @@
-/**
- * Hide visually
- *
- * See http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- * for discussion of different solutions
- */
-
 @mixin visuallyhidden() {
 	width: 1px;
 	height: 1px;

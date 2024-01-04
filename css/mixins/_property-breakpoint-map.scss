@@ -1,9 +1,7 @@
 /**
- * property-breakpoint-map Mixin
  *
  * Uses a map with values per breakpoint and
  * sets the defined property in every defined breakpoint
- *
  *
  * Usage:
  *
@@ -15,7 +13,6 @@
  * .class {
  *     @include property-breakpoint-map(height, $header-height);
  * }
- *
  *
  * Output:
  *

@@ -1,0 +1,14 @@
+@use '../variables' as *;
+@forward '../../../../node_modules/sass-mq/mq' with (
+	$breakpoints: $breakpoints
+);
+@forward 'fluid';
+@forward 'font-style-fluid';
+@forward 'hover-focus';
+@forward 'hyphenate';
+@forward 'object-fit';
+@forward 'overflow-wrap';
+@forward 'property-breakpoint-map';
+@forward 'transition';
+@forward 'visuallyhidden';
+@forward 'z-index';

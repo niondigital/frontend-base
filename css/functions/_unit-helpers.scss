@@ -1,7 +1,3 @@
-/**
- * Unit Helper Functions
- */
-
 @use "sass:math";
 
 @function px-to-em($px, $ref: $font-size_base) {

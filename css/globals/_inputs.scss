@@ -1,20 +1,11 @@
-/**
- * Inputs
- */
-
 /* stylelint-disable selector-max-type */
 /* Exception for basic input styles */
 input,
 textarea,
 select {
 	background-color: transparent;
-	border: 0;
 	border-radius: 0;
 	appearance: none;
-
-	&::placeholder {
-		opacity: 1;
-	}
 }
 
 input[type="search"] {
