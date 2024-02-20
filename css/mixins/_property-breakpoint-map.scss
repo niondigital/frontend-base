@@ -26,10 +26,7 @@
  * }
  */
 
-@use "../vars" as *;
-@forward "../../../../sass-mq/mq" with (
-	$breakpoints: $breakpoints
-);
+@use "../../../../sass-mq/mq" as *;
 
 @mixin property-breakpoint-map($property, $map, $factor: null, $offset: null) {
 	@each $breakpoint, $value in $map {
