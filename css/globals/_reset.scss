@@ -1,5 +1,3 @@
-$reset-focus-outline: true !default;
-
 @import "~normalize.css/normalize";
 
 /* stylelint-disable selector-max-type */
@@ -46,12 +44,5 @@ fieldset {
 
 address {
 	font-style: normal;
-}
-
-@if $reset-focus-outline {
-	[data-whatinput="mouse"] *:focus,
-	[data-whatinput="touch"] *:focus {
-		outline: none;
-	}
 }
 /* stylelint-enable selector-max-type */
