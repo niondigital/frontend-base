@@ -1,12 +1,5 @@
-// @use "../variables" as *;
-// @forward "../../../../node_modules/sass-mq/mq" with (
-// 	$breakpoints: $breakpoints
-// );
-@forward "fluid";
-@forward "font-style-fluid";
-@forward "hyphenate";
-@forward "overflow-wrap";
-@forward "property-breakpoint-map";
-@forward "transition";
+@use "../vars" as *;
+@forward "../../node_modules/sass-mq/mq" with (
+	$breakpoints: $breakpoints
+);
 @forward "visuallyhidden";
-@forward "z-index";
