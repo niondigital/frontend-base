@@ -1,8 +1,8 @@
 @use "sass:map";
 @use "sass:math";
-@use "@css/functions" as *;
-@use "@css/variables" as v;
-@use "@css/mixins" as *;
+@use "../functions" as *;
+@use "../variables" as v;
+@use "../mixins" as *;
 
 $-xlarge: map.get(v.$breakpoints, xlarge);
 

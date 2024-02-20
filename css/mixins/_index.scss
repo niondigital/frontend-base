@@ -1,7 +1,7 @@
-@use "../variables" as *;
-@forward "../../../../node_modules/sass-mq/mq" with (
-	$breakpoints: $breakpoints
-);
+// @use "../variables" as *;
+// @forward "../../../../node_modules/sass-mq/mq" with (
+// 	$breakpoints: $breakpoints
+// );
 @forward "fluid";
 @forward "font-style-fluid";
 @forward "hyphenate";
