@@ -2,7 +2,7 @@
  * Returns a z-index for the given name from the z-index map
  */
 
-@use 'sass:map';
+@use "sass:map";
 
 @mixin z-index($name) {
 	z-index: map.get($z-indices, $name);

@@ -17,8 +17,8 @@
  * }
  */
 
-@use '@css/variables' as *;
-@use '@css/functions' as *;
+@use "@css/variables" as *;
+@use "@css/functions" as *;
 
 $-xlarge: map.get($breakpoints, xlarge);
 

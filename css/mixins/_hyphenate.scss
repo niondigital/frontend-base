@@ -1,4 +1,4 @@
-@use 'overflow-wrap';
+@use "overflow-wrap";
 
 @mixin hyphenate() {
 	@include overflow-wrap(break-word);
