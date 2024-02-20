@@ -1,5 +1,5 @@
 @use "../vars" as *;
-@forward "../../node_modules/sass-mq/mq" with (
+@forward "../../../../sass-mq/mq" with (
 	$breakpoints: $breakpoints
 );
 @forward "visuallyhidden";
