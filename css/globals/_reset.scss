@@ -1,7 +1,6 @@
+/* stylelint-disable selector-max-type */
 @use "../../../../modern-normalize/modern-normalize.css";
 
-/* stylelint-disable selector-max-type */
-/* Exception for the reset */
 body,
 h1,
 h2,
@@ -45,4 +44,3 @@ fieldset {
 address {
 	font-style: normal;
 }
-/* stylelint-enable selector-max-type */
