@@ -3,6 +3,7 @@
 @forward "../../../../sass-mq/mq" with (
 	$breakpoints: $breakpoints
 );
+@forward "fluid";
 @forward "hyphenate";
 @forward "overflow-wrap";
 @forward "property-breakpoint-map";

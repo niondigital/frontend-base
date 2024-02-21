@@ -41,10 +41,10 @@
 
 		@if $breakpoint == small {
 			/* Mobile first, so no media query needed for "small" */
-			$property: $value;
+			#{$property}: $value;
 		} @else {
 			@include mq($from: $breakpoint) {
-				$property: $value;
+				#{$property}: $value;
 			}
 		}
 	}
