@@ -1,0 +1,8 @@
+@use "../vars" as *;
+@use "../mixins" as *;
+
+@each $name, $value in $font-styles {
+	.fs-#{$name} {
+		@include font-style-fluid($name);
+	}
+}
