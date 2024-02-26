@@ -1,13 +1,14 @@
-@use "sass:math";
-@use "../vars" as *;
+@use 'sass:math';
+@use '../vars' as *;
 
 @function px-to-em($px, $ref: $font-size-base) {
 	@return to-em(math.div(to-px($px), to-px($ref)));
 }
 
 @function px-to-rem($px) {
-  $rems: math.div($px, $font-size-base) * 1rem;
-  @return $rems;
+	$rems: math.div($px, $font-size-base) * 1rem;
+
+	@return $rems;
 }
 
 @function px-to-px($px, $ref: $size_width-content) {
@@ -26,7 +27,7 @@
 /* stylelint-enable length-zero-no-unit */
 
 @function strip-unit($number) {
-	@if type-of($number) == "number" and not unitless($number) {
+	@if type-of($number) == 'number' and not unitless($number) {
 		@return math.div($number, $number * 0 + 1);
 	}
 
