@@ -16,7 +16,6 @@ Die werden in eine `_index.scss` per `@use` geholt und dann werden die Frontend 
 @use 'sizes' as *;
 @use 'colors' as *;
 @forward '@node_modules/@niondigital/frontend-base/css/vars' with (
-	$content-max-width: $content-max-width,
 	$breakpoints: $breakpoints,
 	$show-breakpoints: $show-breakpoints
 );
