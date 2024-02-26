@@ -1,9 +1,16 @@
 @use "sass:map";
 @use "../vars" as * ;
 
-@mixin font-family($font, $font-weight: 400, $font-style: normal, $text-transform: none, $letter-spacing: none) {
+@mixin font-family($font, $font-weight: none, $font-style: normal, $line-height: none, $text-transform: none, $letter-spacing: none) {
 	font-family: map.get($font-families, $font);
-	font-weight: $font-weight;
+
+	@if $font-weight != none {
+		font-weight: $font-weight;
+	}
+
+	@if $line-height != none {
+		line-height: $line-height;
+	}
 
 	@if $font-style != normal {
 		font-style: $font-style;

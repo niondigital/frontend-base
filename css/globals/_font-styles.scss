@@ -1,8 +1,17 @@
 @use "../vars" as *;
+@use "../functions" as *;
 @use "../mixins" as *;
 
 @each $name, $value in $font-styles {
 	.fs-#{$name} {
-		@include font-style-fluid($name);
+		@include font-family(
+			map-deep-get($font-styles, $name, font-family),
+			map-deep-get($font-styles, $name, font-weight),
+			map-deep-get($font-styles, $name, font-style),
+			map-deep-get($font-styles, $name, line-height),
+			map-deep-get($font-styles, $name, text-transform),
+			map-deep-get($font-styles, $name, letter-spacing)
+		);
+		font-size: fluid(map-deep-get($font-styles, $name, font-size-min), map-deep-get($font-styles, $name, font-size-max));
 	}
 }
