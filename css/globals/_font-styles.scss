@@ -12,6 +12,10 @@
 			map-deep-get($font-styles, $name, text-transform),
 			map-deep-get($font-styles, $name, letter-spacing)
 		);
-		font-size: fluid(map-deep-get($font-styles, $name, font-size-min), map-deep-get($font-styles, $name, font-size-max));
+		@if map-deep-get($font-styles, $name, font-size-min) == map-deep-get($font-styles, $name, font-size-max) {
+			font-size: px-to-rem(map-deep-get($font-styles, $name, font-size-min));
+		} @else {
+			font-size: fluid(map-deep-get($font-styles, $name, font-size-min), map-deep-get($font-styles, $name, font-size-max));
+		}
 	}
 }
