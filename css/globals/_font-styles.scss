@@ -1,0 +1,27 @@
+@use '../vars' as *;
+@use '../functions' as *;
+@use '../mixins' as *;
+
+@if $font-styles {
+	@each $name, $value in $font-styles {
+		.fs-#{$name} {
+			@include font-family(
+				map-deep-get($font-styles, $name, font-family),
+				map-deep-get($font-styles, $name, font-weight),
+				map-deep-get($font-styles, $name, font-style),
+				map-deep-get($font-styles, $name, line-height),
+				map-deep-get($font-styles, $name, text-transform),
+				map-deep-get($font-styles, $name, letter-spacing)
+			);
+
+			@if map-deep-get($font-styles, $name, font-size-min) == map-deep-get($font-styles, $name, font-size-max) {
+				font-size: px-to-rem(map-deep-get($font-styles, $name, font-size-min));
+			} @else {
+				font-size: fluid(
+					map-deep-get($font-styles, $name, font-size-min),
+					map-deep-get($font-styles, $name, font-size-max)
+				);
+			}
+		}
+	}
+}

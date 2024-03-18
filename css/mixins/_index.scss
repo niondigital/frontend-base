@@ -1,0 +1,8 @@
+@use '../vars' as *;
+@forward '../../../../sass-mq/mq' with (
+	$breakpoints: $breakpoints
+);
+@forward 'font-family';
+@forward 'hyphenate';
+@forward 'overflow-wrap';
+@forward 'visuallyhidden';

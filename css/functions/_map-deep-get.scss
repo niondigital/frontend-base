@@ -1,10 +1,8 @@
-/**
- * get-map() for multiple levels deep
- * https://css-tricks.com/snippets/sass/deep-getset-maps/
- */
+@use 'sass:map';
+
 @function map-deep-get($map, $keys...) {
 	@each $key in $keys {
-		$map: map-get($map, $key);
+		$map: map.get($map, $key);
 	}
 
 	@return $map;

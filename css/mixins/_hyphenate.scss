@@ -1,9 +1,13 @@
+@use 'overflow-wrap' as *;
+
 @mixin hyphenate() {
 	@include overflow-wrap(break-word);
+
 	hyphens: auto;
 }
 
 @mixin hyphenate-reset() {
 	@include overflow-wrap(normal);
+
 	hyphens: manual;
 }

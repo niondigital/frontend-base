@@ -1,0 +1,33 @@
+@use 'sass:map';
+@use '../vars' as *;
+
+@mixin font-family(
+	$font,
+	$font-weight: none,
+	$font-style: normal,
+	$line-height: none,
+	$text-transform: none,
+	$letter-spacing: none
+) {
+	font-family: map.get($font-families, $font);
+
+	@if $font-weight != none {
+		font-weight: $font-weight;
+	}
+
+	@if $line-height != none {
+		line-height: $line-height;
+	}
+
+	@if $font-style != normal {
+		font-style: $font-style;
+	}
+
+	@if $text-transform != none {
+		text-transform: $text-transform;
+	}
+
+	@if $letter-spacing != none {
+		letter-spacing: $letter-spacing;
+	}
+}

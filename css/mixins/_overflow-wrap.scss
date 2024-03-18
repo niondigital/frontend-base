@@ -1,7 +1,5 @@
 /**
- * Overflow-Wrap
- *
- * Wraps text, which is too long to fit in one line and would otherwise create a text which overflows it's content box.
+ * Wraps text, which is too long to fit in one line and would otherwise create a text which overflows it"s content box.
  * `word-wrap` is the legacy property name, which is still required by some
  * browsers.
  * Because Autoprefixer is not creating `word-wrap` when it

@@ -1,0 +1,7 @@
+$breakpoints: (
+	small: 320px,
+	medium: 768px,
+	large: 1024px,
+	xlarge: 1920px
+) !default;
+$show-breakpoints: (small, medium, large, xlarge) !default;

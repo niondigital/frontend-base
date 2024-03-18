@@ -1,12 +1,5 @@
-/**
- * Reset
- */
-$reset-focus-outline: true !default;
+@use '../../../../modern-normalize/modern-normalize.css';
 
-@import "~normalize.css/normalize";
-
-/* stylelint-disable selector-max-type */
-/* Exception for the reset */
 body,
 h1,
 h2,
@@ -50,12 +43,3 @@ fieldset {
 address {
 	font-style: normal;
 }
-
-@if $reset-focus-outline {
-	[data-whatinput="mouse"] *:focus,
-	[data-whatinput="touch"] *:focus {
-		outline: none;
-	}
-}
-
-/* stylelint-enable selector-max-type */

@@ -1,6 +1,6 @@
 {
   "name": "@niondigital/frontend-base",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "description": "nion digital base CSS + JS\n",
   "repository": {
     "type": "git",
@@ -13,9 +13,9 @@
   "homepage": "https://github.com/niondigital/frontend-base",
   "dependencies": {
     "@types/lodash": "^4.14.173",
-    "fontfaceobserver": "2.0.13",
     "lodash": "^4.17.21",
-    "normalize.css": "8.0.1"
+    "modern-normalize": "^2.0.0",
+    "sass-mq": "^6.0.0"
   },
   "devDependencies": {}
 }
